@@ -1,14 +1,14 @@
-const f1=()=> {
+const f1 = () => {
     console.log("f1");
 };
 
-const f2=()=> {
+const f2 = () => {
     console.log("f2");
 };
 
-const main=()=> {
+const main = () => {
     console.log("main");
-    setTimeout(f1, 5000);
+    setTimeout(f1, 0);
     f2();
     console.log("end");
 };
