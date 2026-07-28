@@ -1,27 +1,27 @@
-import {EventEmitter} from 'node:events';
+const { EventEmitter } = require("node:events");
 
 const sayHi = (name) => {
-    console.log('${name} logged in');
+    console.log(`${name} logged in`);
 
 };
 
 const task = new EventEmitter();
 
 task.once("Exit", (name) => {
-    console.log('Sytem shutdown by ${name}');
+    console.log(`System shutdown by ${name}`);
 });
 
 task.once("greet", (name) => {
-    console.log('Sytem started');
+    console.log(`System started by ${name}`);
 });
 
 task.on("greet", sayHi);
-task.on("greet",(name)=>{
-    console.log('${name} starts working');
+task.on("greet", (name) => {
+    console.log(`${name} starts working`);
 });
 
-task.on("greet",(name) => {
-    console.log('${name} Lagged out');
+task.on("greet", (name) => {
+    console.log(`${name} logged out`);
 });
 
 task.emit("greet", "Rahul Singh");

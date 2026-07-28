@@ -1,4 +1,4 @@
-import { EventEmitter } from "node:events";
+const { EventEmitter } = require("node:events");
 
 class OrderSystem extends EventEmitter {
   placeOrder(order) {
@@ -34,7 +34,7 @@ orderObj.on("error", (err) => {
   console.log(`Error in order ${err}`);
 });
 
-OrderSystem.placeOrder({
+orderObj.placeOrder({
   id: "ORD10001",
   customerName: "Ramesh Solanki",
   email: "ramesh.sol27@gmail.com",
