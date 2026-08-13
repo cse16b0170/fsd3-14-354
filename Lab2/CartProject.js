@@ -35,6 +35,11 @@ const displayCart = async () => {
   console.log(`Total payble amount Rs. ${total}`);
 };
 
+const removeProduct = async(pid)=>{
+  const cart = await getCart();
+  const isFoundCart = cart.find((item) => item.id === pid);
+}
+
 const main = async () => {
   let choice;
   const cin = readline.createInterface({ input: stdin, output: stdout });
