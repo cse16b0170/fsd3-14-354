@@ -5,19 +5,27 @@ const b1={
   quantity:10,
   rating:5.0,
 }
+const b2={
+  picUrl: "https://imgs.search.brave.com/ZHEfhXAnnLxgvAX-FR7ozf8zpVsQ_ICtT0g23MSPKG8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFkd3F6MUJVM0wu/anBn",
+  bname:"React Design Pattern",
+  price: 1199,
+  quantity:10,
+  rating:5.0,
+}
 
 
-function Book(){
+function Book(props) {
+  console.log(props)
   return (
     <div>
       <img
-      src={b1.picUrl}
-      alt={b1.bname}
+      src={props.book.picUrl}
+      alt={props.book.bname}
       />
-    <h1>Let us react</h1>
-    <h2>Price: 765.00</h2>
-    <h3>Quantity: 5</h3>
-    <h4>Rating: 5.0</h4>
+    <h1>{props.book.bname}</h1>
+    <h2>Price: {props.book.price}</h2>
+    <h3>Quantity: {props.book.quantity}</h3>
+    <h4>Rating: {props.book.rating}</h4>
     </div>
   )
 }
@@ -25,11 +33,11 @@ function Book(){
 export default function App(){
   return (
   <>
-  <Book/>
+  <Book book={b1} />
   <h1>Hello React</h1>
-  <Book />
-  <Book />
-  <Book />
+  <Book book={b2} />
+  <Book book={b1} />
+  <Book book={b2} />
   </>
   )
 }
