@@ -11,8 +11,8 @@ function Book(){
   return (
     <div>
       <img
-      src="https://imgs.search.brave.com/48J4YveDPnEPuYkeKoBtCjADHsGGqKA0zomviVEKB-o/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/aXMtaXMtZ3VuYWhv/bi1rYS1kZXZ0YS1p/cy1vdmVycmF0ZWQt/aS1hbS1hbG1vc3Qt/YXQtdjAta2RoYnhm/NTlnYWdkMS5qcGVn/P3dpZHRoPTY0MCZj/cm9wPXNtYXJ0JmF1/dG89d2VicCZzPWNk/ZjliMWZjNGUxNzBh/NTA0ZTA3ZjM5Mjc1/ODIwZjk0NmJmNDlj/ZTM"
-      alt="Desing Pattern React Js"
+      src={b1.picUrl}
+      alt={b1.bname}
       />
     <h1>Let us react</h1>
     <h2>Price: 765.00</h2>
