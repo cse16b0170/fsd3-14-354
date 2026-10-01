@@ -1,31 +1,48 @@
-const b1={
-  picUrl: "https://imgs.search.brave.com/48J4YveDPnEPuYkeKoBtCjADHsGGqKA0zomviVEKB-o/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/aXMtaXMtZ3VuYWhv/bi1rYS1kZXZ0YS1p/cy1vdmVycmF0ZWQt/aS1hbS1hbG1vc3Qt/YXQtdjAta2RoYnhm/NTlnYWdkMS5qcGVn/P3dpZHRoPTY0MCZj/cm9wPXNtYXJ0JmF1/dG89d2VicCZzPWNk/ZjliMWZjNGUxNzBh/NTA0ZTA3ZjM5Mjc1/ODIwZjk0NmJmNDlj/ZTM",
-  bname:"React Design Pattern",
-  price: 1199,
-  quantity:10,
-  rating:5.0,
-}
-const b2={
-  picUrl: "https://imgs.search.brave.com/ZHEfhXAnnLxgvAX-FR7ozf8zpVsQ_ICtT0g23MSPKG8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFkd3F6MUJVM0wu/anBn",
-  bname:"React Design Pattern",
-  price: 1199,
-  quantity:10,
-  rating:5.0,
-}
+const b1 = {
+  picUrl: "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=500&auto=format&fit=crop",
+  bname: "The Art of Cinema",
+  price: 899,
+  quantity: 14,
+  rating: 4.9,
+};
+
+const b2 = {
+  picUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=500&auto=format&fit=crop",
+  bname: "Legends of Rock & Roll",
+  price: 1299,
+  quantity: 7,
+  rating: 4.8,
+};
+
+const b3 = {
+  picUrl: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=500&auto=format&fit=crop",
+  bname: "Sci-Fi & Fantasy Worlds",
+  price: 1099,
+  quantity: 11,
+  rating: 5.0,
+};
+
+const b4 = {
+  picUrl: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=500&auto=format&fit=crop",
+  bname: "Stage & Spotlight",
+  price: 949,
+  quantity: 9,
+  rating: 4.7,
+};
 
 
 function Book(props) {
-  console.log(props)
+  const{ rating, quantity, price, bname, picUrl } = props.book;
   return (
     <div>
       <img
-      src={props.book.picUrl}
-      alt={props.book.bname}
+      src={picUrl}
+      alt={bname}
       />
-    <h1>{props.book.bname}</h1>
-    <h2>Price: {props.book.price}</h2>
-    <h3>Quantity: {props.book.quantity}</h3>
-    <h4>Rating: {props.book.rating}</h4>
+    <h1>{bname}</h1>
+    <h2>Price: {price}</h2>
+    <h3>Quantity: {quantity}</h3>
+    <h4>Rating: {rating}</h4>
     </div>
   )
 }
@@ -33,11 +50,13 @@ function Book(props) {
 export default function App(){
   return (
   <>
+  <h1>Online Book Store</h1>
+  <div className="container">
   <Book book={b1} />
-  <h1>Hello React</h1>
   <Book book={b2} />
-  <Book book={b1} />
-  <Book book={b2} />
+  <Book book={b3} />
+  <Book book={b4} />
+  </div>
   </>
   )
 }
