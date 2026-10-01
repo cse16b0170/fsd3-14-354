@@ -20,3 +20,20 @@
 2. it must starts with capital letter
 3. it should be treated as html tag
 4. it must be closed
+
+## object distructure
+const {rating , bname , price , quantity , picUrl} = props.book;
+Does not depend on order , if property is not availabe then it initializes with null.
+const{price, picUrl} = props.book;
+const {price , ..rest} = props.book;
+return rest;
+Any components include slides:
+1.External css = create class in Index.css and use in component.
+2. Internal css = create property as object like:
+'''
+
+'''
+
+then apply with style attribute and then pass the object
+
+3. Inline CSS : In this method we use two curly brackets withs style attribute, all the CSS property must be single word for example: text-align becomes textAlign(Camel Case).

@@ -30,33 +30,39 @@ const b4 = {
   rating: 4.7,
 };
 
-
 function Book(props) {
-  const{ rating, quantity, price, bname, picUrl } = props.book;
+  const { rating, quantity, price, bname, picUrl } = props.book;
   return (
     <div>
-      <img
-      src={picUrl}
-      alt={bname}
-      />
-    <h1>{bname}</h1>
-    <h2>Price: {price}</h2>
-    <h3>Quantity: {quantity}</h3>
-    <h4>Rating: {rating}</h4>
+      <img src={picUrl} alt={bname} />
+      <h1>{bname}</h1>
+      <h2>Price: {price}</h2>
+      <h3>Quantity: {quantity}</h3>
+      <h4>Rating: {rating}</h4>
+      
+      {/* Yahan '<' missing tha, jo theek kar diya hai */}
+      <div className="btn-container">
+        <button className="cart-btn" onClick={() => alert(`Added ${bname} to cart!`)}>
+          Add to Cart
+        </button>
+        <button className="buy-btn" onClick={() => alert(`Buying ${bname}!`)}>
+          Buy Now
+        </button>
+      </div>
     </div>
   )
 }
 
 export default function App(){
   return (
-  <>
-  <h1>Online Book Store</h1>
-  <div className="container">
-  <Book book={b1} />
-  <Book book={b2} />
-  <Book book={b3} />
-  <Book book={b4} />
-  </div>
-  </>
+    <>
+      <h1>Online Book Store</h1>
+      <div className="container">
+        <Book book={b1} />
+        <Book book={b2} />
+        <Book book={b3} />
+        <Book book={b4} />
+      </div>
+    </>
   )
 }
